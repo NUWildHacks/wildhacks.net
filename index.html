@@ -4,44 +4,86 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/wildhacks.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="WildHacks" />
+    <meta property="og:description" content="" />
     <title>WildHacks 2023</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
-  <header>
+  <header id="home">
     <nav class="navbar">
       <img class="logo" src="public/wildhacks.png" alt="WildHacks' Logo">
       <ul class="nav-list">
-        <li><a href="default.asp">home</a></li>
-        <li><a href="news.asp">about</a></li>
-        <li><a href="contact.asp">tracks</a></li>
-        <li><a href="about.asp">sponsors</a></li>
-        <li><a href="about.asp">FAQ</a></li>
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#tracks">tracks</a></li>
+        <li><a href="#sponsors">sponsors</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>  
-    <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-white.svg" alt="Major League Hacking 2023 Hackathon Season" style="width:100%"></a>
+    <a id="mlh-trust-badge" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-white.svg" alt="Major League Hacking 2023 Hackathon Season"></a>
   </header>
   
   <body>
     <script type="module" src="/src/main.jsx"></script>
 
-    <h3>April 15-16 2023 in Evanston, IL</h1>
-    <h1>2023 WildHacks Registration is open!</h1>
-    <button>register now</button>
-    <span>
-      Instagram
-      Facebook
-    </span>
-
-    <div>
-      Sponsored By
+    <div class="banner">
+      <h3 id="p">April 15-16 2023 in Evanston, IL</h1>
+      <h1 id="h1">2023 WildHacks Registration is open!</h1>
+      <div><button class="register-button">REGISTER NOW!</button></div>
+      <span>
+        <a href="https://www.instagram.com/nuwildhacks/?hl=en" target="_blank">
+          <img class="socials" src="public/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/nuwildhacks/" target="_blank">
+          <img class="socials" src="public/facebook.png" alt="Facebook">
+        </a>
+      </span>
     </div>
 
-    <div>
-      About us
+    <div id="sponsors" class="sponsor">
+      <h3>SPONSORED BY</h3>
+      <div class="sponsor-container">
+        <a href="https://techcrunch.com/" target="_blank" class="grow">
+          <img src="public/techcrunch.png" alt="TechCrunch">
+        </a>
+        <a href="https://www.fastcompany.com/" target="_blank" class="grow">
+          <img src="public/fastcompany.png" alt="FastCompany">
+         </a>
+        <a href="https://mit.edu/" target="_blank" class="grow">
+          <img src="public/mit.png" alt="MIT">
+        </a>
+        <a href="https://forbes.com/" target="_blank" class="grow">
+          <img src="public/forbes.png" alt="Forbes">
+        </a>
+      </div>
+    </div>
+
+    <div id="about" class="about">
+      <h1 id="h2">About Us</h1>
+      <p id="p">WildHacks is Northwestern’s overnight Hackathon taking place in-person April 15-16 2023. 
+        As Northwestern’s largest hackathon, WildHacks is an opportunity for students to learn 
+        programming skills and develop a final project in a collaborative and inclusive environment. 
+        Through workshops, mentorship, and prizes, WildHacks aims to be an inclusive event that welcomes 
+        students of all skill levels, majors, and backgrounds</p>
+    </div>
+
+    <div id = "faq" class="faq">
+      <h1 id="h2">FAQ</h1>
+      <div class="questions">
+
+      </div>
     </div>
   </body>
+
+  <footer>
+    <h3 id="p">Any other questions?</h3>
+    <h3 id="p">Email us at 
+      <a href = "mailto: wildhacks@northwestern.edu" target="_blank">wildhacks@northwestern.edu</a>
+    </h3>
+  </footer>
 
 </html>
