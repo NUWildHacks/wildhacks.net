@@ -30,7 +30,7 @@ function Heading() {
     <Container>
       <Time>April 15-16 2023</Time>
       <Title>2023 WildHacks registration is now open!</Title>
-      <Button>Register</Button>
+      <Button href="https://wildhacks.net">Register</Button>
     </Container>
   );
 }
