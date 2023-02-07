@@ -1,4 +1,17 @@
+html {
+  font-family: "Outfit", Helvetica, Arial, sans-serif;
+  background: #010922;
+  color: white;
+  letter-spacing: 0.1em;
+  scroll-behavior: smooth;
+}
+
 body {
+  padding-top: 10px;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  background-image: url("public/orb2.png"), url("public/orb1.png");
+  background-repeat: no-repeat;
+  background-position: 100% 160%, 0% 0%;
+  background-attachment: local;
   margin: 0;
-  font-family: Roboto;
 }
