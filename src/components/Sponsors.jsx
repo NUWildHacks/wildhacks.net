@@ -4,6 +4,12 @@ import Logo from './Logo';
 const Container = styled.div`
   max-width: 1000px;
   margin: 0 auto;
+
+  @media screen and (max-width:859px){
+    max-width: 600px;
+    margin: 0 auto;
+    transition: ease all .5s;
+  }
 `;
 
 const Title = styled.h3`
@@ -11,6 +17,12 @@ const Title = styled.h3`
   font-size: 20px;
   line-height: 28px;
   text-transform: uppercase;
+
+  @media screen and (max-width:859px){
+    font-size: 15px;
+    transition: ease all .5s;
+    margin-left: 10px;
+}
 `;
 
 const Sponsor = styled.div`

@@ -13,6 +13,11 @@ const Time = styled.p`
   opacity: 0.75;
   margin: 0;
   font-family: 'Roboto';
+
+  @media screen and (max-width:859px){
+    font-size: 15px;
+    transition: ease all .5s;
+  }
 `;
 
 const Title = styled.h1`
@@ -20,6 +25,11 @@ const Title = styled.h1`
   font-size: 80px;
   margin: 0;
   resize: none;
+
+  @media screen and (max-width:859px){
+    font-size: 50px;
+    transition: ease all .5s;
+  }
 `;
 
 const Button = styled.a`
@@ -49,6 +59,14 @@ const Button = styled.a`
   &:hover{
     opacity: 0.7;
   }
+
+  @media screen and (max-width:859px){
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    transition: ease all .5s;
+  }
 `;
 
 const Social = styled.span `
@@ -64,6 +82,12 @@ const Social = styled.span `
     }
   }
 
+  img {
+    @media screen and (max-width:859px){
+      transition: ease all .5s;
+      width: 35px;
+      height: 35px;
+  }
 `;
 
 

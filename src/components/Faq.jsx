@@ -12,6 +12,11 @@ const Container = styled.div`
     line-height: 68px;
     text-align: center;
     padding-top: 50px;
+
+    @media screen and (max-width:859px){
+        font-size: 40px;
+        transition: ease all .5s;
+    }
   }
 `;
 

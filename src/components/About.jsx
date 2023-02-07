@@ -11,6 +11,11 @@ const Container = styled.div`
     font-size: 57px;
     line-height: 68px;
     padding-top: 50px;
+
+    @media screen and (max-width:859px){
+        font-size: 40px;
+        transition: ease all .5s;
+    }
   }
 
   p {
@@ -22,6 +27,11 @@ const Container = styled.div`
     width: 60%;
     margin-left: 20%;
     text-align: center;
+
+    @media screen and (max-width:859px){
+        font-size: 15px;
+        transition: ease all .5s;
+    }
   }
 `;
 

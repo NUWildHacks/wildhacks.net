@@ -10,10 +10,22 @@ const Sponsor = styled.a`
     transform: scale(1.3); 
   }
 
+  @media screen and (max-width:859px){
+    width: 100px;
+    height: auto;
+    transition: ease all .5s;
+  }
+
   img {
     width: 200px;
     max-height: 55px;
     height: auto;
+
+    @media screen and (max-width:859px){
+      width: 100px;
+      height: auto;
+      transition: ease all .5s;
+    }
   }
 `;
 

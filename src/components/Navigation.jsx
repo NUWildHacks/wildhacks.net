@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 const Container = styled.header`
+  @media screen and (max-width:859px) {
+    display: none;
+  }
 `;
 
 const Nav = styled.nav`

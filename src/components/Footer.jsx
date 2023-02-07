@@ -9,6 +9,11 @@ const Container = styled.footer`
     h3 {
         margin-bottom: 0;
         padding-bottom: 10px;
+
+        @media screen and (max-width:859px){
+            font-size: 15px;
+            transition: ease all .5s;
+        }
     }
 
     a {
