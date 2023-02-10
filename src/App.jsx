@@ -1,20 +1,26 @@
-import Heading from './components/Heading';
-import Sponsors from './components/Sponsors';
+import Heading from './Heading';
+import Sponsors from './Sponsors';
 import Navigation from './components/Navigation';
-import About from './components/About';
-import Faq from './components/Faq';
-import Footer from './components/Footer';
+import About from './About';
+import Faq from './Faq';
+import Footer from './Footer';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+`;
 
 function App() {
   return (
-    <div>
+    <Container>
       <Navigation />
       <Heading />
-      <Sponsors />
       <About />
       <Faq />
       <Footer />
-    </div>
+    </Container>
   );
 }
 
