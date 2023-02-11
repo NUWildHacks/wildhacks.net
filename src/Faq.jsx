@@ -78,17 +78,24 @@ function Faq() {
           overnight. More details about the logistics of check-in will be
           released closer to the event.
         </Question>
-        <Question q="Will there be sleeping / showering accommodations? (TBA)">
-          TBA.
+        <Question q="Will there be sleeping / showering accommodations?">
+          There will a room reserved overnight dedicated to sleeping. However,
+          we recommend bringing pillows and blankets. There are two showers at
+          Mudd Library, and we'll provide toiletries (shower gel, shampoo, and
+          conditioner), but we recommend bringing your own towel.
         </Question>
         <Question q="Will transportation be reimbursed?">
           Transportation will not be reimbursed.
         </Question>
-        <Question q="Do we have to stay for the full 36 hours? (TBA)">
-          No, you are free to leave the event before the hackathon ends! TBA.
+        <Question q="Do we have to stay for the full 36 hours?">
+          No, you are free to leave the event before the hackathon ends!
+          However, in order to claim prizes, you must be present at the closing
+          ceremony on Sunday, April 15 at 4:00 PM.
         </Question>
-        <Question q="What are the tentative COVID protocols? (TBA)">
-          TBA.
+        <Question q="What are the tentative COVID protocols?">
+          We strongly recommend masking during the event. If you're more
+          comfortable eating food outdoors, there will be an outdoor courtyard
+          right next to the venue with tables and chairs.
         </Question>
       </Category>
       <Category>
