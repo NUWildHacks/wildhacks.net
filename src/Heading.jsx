@@ -1,9 +1,8 @@
-import styled from 'styled-components';
-import Admonition from './components/Admonition';
+import { faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faFire } from '@fortawesome/free-solid-svg-icons';
-import { Bold, mobile } from './styles';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import styled from 'styled-components';
+import { mobile } from './styles';
 
 const Container = styled.div`
   padding: 32px;
@@ -48,7 +47,7 @@ const ButtonContainer = styled.div`
 `;
 
 const Button = styled.a`
-  padding: 16px 16px;
+  padding: ${({ icon }) => (icon ? '10px' : '16px')};
   border-radius: 16px;
   color: #ffffff;
   border: 2px solid white;
@@ -59,8 +58,8 @@ const Button = styled.a`
   gap: 8px;
 
   svg {
-    width: 20px;
-    height: 20px;
+    ${({ icon }) =>
+      icon ? 'width: 32px; height: 32px;' : 'width: 20px; height: 20px;'}
     transition: transform 200ms;
   }
 
@@ -80,28 +79,34 @@ const Button = styled.a`
   &:active {
     transform: scale(0.95);
   }
+
+  ${({ disabled }) => disabled && 'opacity: 0.5; pointer-events: none;'}
 `;
 
 function Heading() {
   return (
     <Container>
-      <Admonition icon={<FontAwesomeIcon icon={faFire} />}>
-        Registration for the 2023 hackathon is open until{' '}
-        <Bold>February 28</Bold>!
-      </Admonition>
       <Time>April 15-16 2023 in Evanston, IL</Time>
       <Title>WILDHACKS 2023</Title>
       <ButtonContainer>
-        <Button moveArrow href="https://dashboard.wildhacks.net/register">
-          <p>REGISTER NOW</p>
-          <FontAwesomeIcon icon={faArrowRight} />
+        <Button disabled href="https://dashboard.wildhacks.net/register">
+          <p>REGISTRATION CLOSED</p>
         </Button>
         <Button
+          icon
           href="https://www.instagram.com/wildhacks/"
           target="_blank"
           rel="noreferrer"
         >
           <FontAwesomeIcon icon={faInstagram} />
+        </Button>
+        <Button
+          icon
+          href="https://www.facebook.com/WildHacksNU"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FontAwesomeIcon icon={faFacebookF} />
         </Button>
       </ButtonContainer>
     </Container>
