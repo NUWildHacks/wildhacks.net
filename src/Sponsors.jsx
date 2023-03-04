@@ -18,6 +18,7 @@ const Content = styled.div`
   gap: 32px;
   flex-wrap: wrap;
   background-color: #ffffff;
+  box-shadow: 0 0 16px #ffffff;
   padding: 16px;
   border-radius: 12px;
 `;
@@ -25,13 +26,29 @@ const Content = styled.div`
 function Sponsors() {
   return (
     <Container>
-      <Title>— SPONSORED BY —</Title>
+      <Title>— OUR SPONSORS —</Title>
       <Content>
         <Sponsor src="/imc.png" alt="IMC" href="https://www.imc.com/us/" />
         <Sponsor
           src="/northwestern-cs.png"
           alt="Northwestern Computer Science"
           href="https://www.mccormick.northwestern.edu/computer-science/"
+        />
+        <Sponsor
+          src="/deloitte.png"
+          alt="Deloitte"
+          href="https://www2.deloitte.com/us/en.html"
+        />
+        <Sponsor
+          src="/spiderrock.png"
+          alt="SpiderRock"
+          href="https://www.spiderrock.net/"
+        />
+        <Sponsor
+          src="/thegarage.jpeg"
+          alt="The Garage"
+          href="https://thegarage.northwestern.edu/"
+          h={128}
         />
       </Content>
     </Container>
