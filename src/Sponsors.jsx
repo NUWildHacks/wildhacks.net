@@ -44,6 +44,7 @@ function Sponsors() {
           alt="SpiderRock"
           href="https://www.spiderrock.net/"
         />
+        <Sponsor src="/poatek.png" alt="POATEK" href="https://poatek.com/" />
         <Sponsor
           src="/thegarage.jpeg"
           alt="The Garage"
