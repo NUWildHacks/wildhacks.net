@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Question from './components/Question';
 import Section from './components/Section';
+import Partners from './Partners';
 
 const Category = styled.div`
   margin: 48px 0;
@@ -110,6 +111,7 @@ function Faq() {
           happy to talk.
         </Question>
       </Category>
+      <Partners />
     </Section>
   );
 }

@@ -1,5 +1,4 @@
 import Heading from './Heading';
-import Sponsors from './Sponsors';
 import Navigation from './components/Navigation';
 import About from './About';
 import Faq from './Faq';
