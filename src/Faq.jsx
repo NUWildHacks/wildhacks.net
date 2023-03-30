@@ -40,8 +40,9 @@ function Faq() {
         </Question>
         <Question q="Where can I find an event-based schedule for the entirety of this hackathon?">
           The full schedule will be released closer to the event, but check-in
-          will begin at <span>11:00 AM on Saturday, April 15, 2023</span>, and
-          the closing ceremony will end at{' '}
+          will begin at <span>9:00 AM on Saturday, April 15, 2023</span> with
+          the opening ceremony starting at <span>11:00 AM</span>, and the
+          closing ceremony will end at{' '}
           <span>5:00 PM on Sunday, April 16, 2023</span>.
         </Question>
         <Question q="What will I submit?">
