@@ -89,8 +89,8 @@ function Heading() {
       <Time>April 15-16 2023 in Evanston, IL</Time>
       <Title>WILDHACKS 2023</Title>
       <ButtonContainer>
-        <Button disabled href="https://dashboard.wildhacks.net/register">
-          <p>REGISTRATION CLOSED</p>
+        <Button href="https://dashboard.wildhacks.net">
+          <p>DASHBOARD</p>
         </Button>
         <Button
           icon
