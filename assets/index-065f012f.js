@@ -885,7 +885,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   }
 
   ${({disabled:e})=>e&&"opacity: 0.5; pointer-events: none;"}
-`;function Ay(){return ee(Ey,{children:[R(Py,{children:"April 15-16 2023 in Evanston, IL"}),R(_y,{children:"WILDHACKS 2023"}),ee(by,{children:[R(xl,{disabled:!0,href:"https://dashboard.wildhacks.net/register",children:R("p",{children:"REGISTRATION CLOSED"})}),R(xl,{icon:!0,href:"https://www.instagram.com/wildhacks/",target:"_blank",rel:"noreferrer",children:R(Mn,{icon:C1})}),R(xl,{icon:!0,href:"https://www.facebook.com/WildHacksNU",target:"_blank",rel:"noreferrer",children:R(Mn,{icon:x1})})]})]})}const Oy=le.nav`
+`;function Ay(){return ee(Ey,{children:[R(Py,{children:"April 15-16 2023 in Evanston, IL"}),R(_y,{children:"WILDHACKS 2023"}),ee(by,{children:[R(xl,{href:"https://dashboard.wildhacks.net",children:R("p",{children:"DASHBOARD"})}),R(xl,{icon:!0,href:"https://www.instagram.com/wildhacks/",target:"_blank",rel:"noreferrer",children:R(Mn,{icon:C1})}),R(xl,{icon:!0,href:"https://www.facebook.com/WildHacksNU",target:"_blank",rel:"noreferrer",children:R(Mn,{icon:x1})})]})]})}const Oy=le.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
