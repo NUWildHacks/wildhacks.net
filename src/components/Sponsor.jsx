@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import { mobile } from '../styles';
 
 const Container = styled.a`
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
     height: ${(props) => props.h || 64}px;

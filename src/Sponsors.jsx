@@ -27,6 +27,12 @@ export default function Sponsors() {
         href="https://thegarage.northwestern.edu/"
         h={128}
       />
+      <Sponsor
+        src="/github.png"
+        alt="GitHub"
+        href="https://github.com/"
+        h={48}
+      />
     </SponsorBox>
   );
 }
