@@ -4,6 +4,7 @@ import About from './About';
 import Faq from './Faq';
 import Footer from './Footer';
 import styled from 'styled-components';
+import MailingList from './components/MailingList';
 
 const Container = styled.div`
   max-width: 1000px;
@@ -19,6 +20,7 @@ function App() {
       <About />
       <Faq />
       <Footer />
+      <MailingList />
     </Container>
   );
 }

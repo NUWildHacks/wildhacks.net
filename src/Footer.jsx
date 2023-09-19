@@ -24,15 +24,22 @@ const Email = styled.p`
   }
 `;
 
+const BottomPadding = styled.div`
+  height: 64px;
+`;
+
 function Footer() {
   return (
-    <Section>
-      <Email>
-        <a href="mailto:wildhacks@northwestern.edu">
-          wildhacks@northwestern.edu
-        </a>
-      </Email>
-    </Section>
+    <>
+      <Section>
+        <Email>
+          <a href="mailto:wildhacks@northwestern.edu">
+            wildhacks@northwestern.edu
+          </a>
+        </Email>
+      </Section>
+      <BottomPadding />
+    </>
   );
 }
 
