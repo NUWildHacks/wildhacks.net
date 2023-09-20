@@ -157,7 +157,7 @@ export default function MailingList() {
     console.log('useEffect triggered. Success:', success);
     let timeout;
 
-    if (success === 'true') {
+    if (success.toString() === 'true') {
       timeout = setTimeout(() => {
         setSuccess('hidden');
       }, 2_000);
