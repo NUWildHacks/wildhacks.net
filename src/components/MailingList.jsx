@@ -68,6 +68,10 @@ const InputContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
+
+  ${mobile} {
+    flex-direction: column;
+  }
 `;
 
 const Input = styled.input`
@@ -85,6 +89,10 @@ const Input = styled.input`
 
   &:focus {
     border-color: #559fd5;
+  }
+
+  ${mobile} {
+    width: 160px;
   }
 `;
 
