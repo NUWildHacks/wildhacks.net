@@ -1,3 +1,4 @@
+import { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 import { mobile } from '../styles';
 
@@ -10,6 +11,12 @@ const Container = styled.div`
   width: 100vw;
   padding: 0 16px;
   box-sizing: border-box;
+  transition: transform 2s ease-in-out;
+
+  ${({ success }) => {
+    if (success === 'hidden')
+      return `transform: translateX(-50%) translateY(100%);`;
+  }};
 `;
 
 const Form = styled.form`
@@ -21,6 +28,29 @@ const Form = styled.form`
   gap: 32px;
   justify-content: center;
   align-items: center;
+
+  .hide {
+    display: ${({ success }) => {
+      if (success === 'true') return `none`;
+    }};
+
+    ${({ success }) => {
+      if (success === 'hidden') return `visibility: hidden`;
+    }};
+  }
+
+  .success {
+    display: ${({ success }) => {
+      if ((success !== 'true') & (success !== 'hidden')) return `none`;
+    }};
+
+    ${({ success }) => {
+      if (success === 'hidden')
+        return `
+        opacity: 0;
+      `;
+    }};
+  }
 
   ${mobile} {
     flex-direction: column;
@@ -48,6 +78,7 @@ const Input = styled.input`
   padding: 4px 8px;
   outline: none;
   width: ${(props) => props.w}px;
+  cursor: pointer;
 
   &:hover {
     border-color: #a0a0a0;
@@ -59,15 +90,16 @@ const Input = styled.input`
 `;
 
 const Button = styled.button`
-  background-color: #559fd5;
+  background-color: #a599ff;
   color: #ffffff;
-  border: none;
+  border: 1px solid #8b74bd;
   padding: 4px 16px;
   border-radius: 6px;
   transition: opacity 150ms;
 
   &:hover {
     opacity: 0.8;
+    cursor: pointer;
   }
 
   &:active {
@@ -76,16 +108,100 @@ const Button = styled.button`
 `;
 
 export default function MailingList() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [success, setSuccess] = useState('');
+
+  const api = 'https://api.dilanxd.com/wildhacks/subscribe';
+  const form = useRef();
+  const messages = {
+    true: 'You have been successfully added to our mailing list',
+    false: 'Subscription failed: Please enter valid inputs',
+    error: 'Subscription error: Please try again',
+  };
+
+  const subscriberData = {
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+  };
+
+  const subscribe = (e) => {
+    e.preventDefault();
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(subscriberData),
+    };
+
+    fetch(api, requestOptions)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setSuccess(data.success);
+      })
+      .catch((error) => {
+        console.log(error);
+        setSuccess('error');
+      });
+  };
+
+  useEffect(() => {
+    console.log('useEffect triggered. Success:', success);
+    let timeout;
+
+    if (success === 'true') {
+      timeout = setTimeout(() => {
+        setSuccess('hidden');
+      }, 2_000);
+    }
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [success]);
+
   return (
-    <Container>
-      <Form>
-        <Text>Interested? Join our mailing list!</Text>
-        <InputContainer>
-          <Input autoComplete="off" placeholder="First Name" w={80} />
-          <Input autoComplete="off" placeholder="Last Name" w={80} />
-          <Input autoComplete="off" placeholder="Email" w={160} />
+    <Container success={success.toString()}>
+      <Form ref={form} onSubmit={subscribe} success={success.toString()}>
+        <Text className="hide">
+          {success === 'false' || success === 'error'
+            ? messages[success.toString()]
+            : 'Interested? Join our mailing list!'}
+        </Text>
+        <p className="success">{messages.true}</p>
+        <InputContainer className="hide">
+          <Input
+            autoComplete="off"
+            placeholder="First Name"
+            w={80}
+            onChange={(e) => setFirstName(e.target.value)}
+            value={firstName}
+          />
+          <Input
+            autoComplete="off"
+            placeholder="Last Name"
+            w={80}
+            onChange={(e) => setLastName(e.target.value)}
+            value={lastName}
+          />
+          <Input
+            autoComplete="off"
+            placeholder="Email"
+            w={160}
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+          />
         </InputContainer>
-        <Button>Join</Button>
+        <Button className="hide" type="submit" value="Send">
+          Join
+        </Button>
       </Form>
     </Container>
   );
