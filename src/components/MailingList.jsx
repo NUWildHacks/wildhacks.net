@@ -78,7 +78,6 @@ const Input = styled.input`
   padding: 4px 8px;
   outline: none;
   width: ${(props) => props.w}px;
-  cursor: pointer;
 
   &:hover {
     border-color: #a0a0a0;
@@ -194,6 +193,7 @@ export default function MailingList() {
             w={80}
             onChange={(e) => setFirstName(e.target.value)}
             value={firstName}
+            required
           />
           <Input
             autoComplete="off"
@@ -201,6 +201,7 @@ export default function MailingList() {
             w={80}
             onChange={(e) => setLastName(e.target.value)}
             value={lastName}
+            required
           />
           <Input
             autoComplete="off"
@@ -208,6 +209,7 @@ export default function MailingList() {
             w={160}
             onChange={(e) => setEmail(e.target.value)}
             value={email}
+            required
           />
         </InputContainer>
         <Button className="hide" type="submit" value="Send" disabled={loading}>
