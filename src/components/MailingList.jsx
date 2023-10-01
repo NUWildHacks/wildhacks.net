@@ -105,6 +105,13 @@ const Button = styled.button`
   &:active {
     opacity: 0.7;
   }
+
+  &:disabled {
+    background-color: #d3d3d3;
+    color: #a8a8a8;
+    border-color: #c0c0c0;
+    cursor: not-allowed;
+  }
 `;
 
 export default function MailingList() {
@@ -112,6 +119,7 @@ export default function MailingList() {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [success, setSuccess] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const api = 'https://api.dilanxd.com/wildhacks/subscribe';
   const form = useRef();
@@ -129,6 +137,7 @@ export default function MailingList() {
 
   const subscribe = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const requestOptions = {
       method: 'POST',
@@ -146,10 +155,12 @@ export default function MailingList() {
       .then((data) => {
         console.log(data);
         setSuccess(data.success);
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
         setSuccess('error');
+        setLoading(false);
       });
   };
 
@@ -199,7 +210,7 @@ export default function MailingList() {
             value={email}
           />
         </InputContainer>
-        <Button className="hide" type="submit" value="Send">
+        <Button className="hide" type="submit" value="Send" disabled={loading}>
           Join
         </Button>
       </Form>
