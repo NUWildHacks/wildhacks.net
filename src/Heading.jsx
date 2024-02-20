@@ -86,8 +86,8 @@ const Button = styled.a`
 function Heading() {
   return (
     <Container>
-      <Time>Coming April 2024 in Evanston, IL</Time>
-      <Title>WILDHACKS 2024</Title>
+      <Time>April 15 - 16 2023 in Evanston, IL</Time>
+      <Title>WILDHACKS 2023</Title>
       <ButtonContainer>
         <Button href="https://dashboard.wildhacks.net">
           <p>DASHBOARD</p>
